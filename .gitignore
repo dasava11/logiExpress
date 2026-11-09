@@ -1,0 +1,83 @@
+
+# ==========================================
+# SISTEMA OPERATIVO Y EDITORES
+# ==========================================
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================================
+# VARIABLES DE ENTORNO Y SECRETOS
+# ==========================================
+
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# PYTHON - BACKEND
+# ==========================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+ENV/
+
+# Herramientas Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Distribución y paquetes
+build/
+dist/
+*.egg-info/
+
+# ==========================================
+# NODE.JS - FRONTEND
+# ==========================================
+
+node_modules/
+.npm/
+.pnpm-store/
+
+# Builds
+dist/
+build/
+.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# ==========================================
+# ARCHIVOS TEMPORALES Y BACKUPS
+# ==========================================
+
+*.log
+*.tmp
+*.bak
+*.backup
+*.old
+
+# ==========================================
+# ARCHIVOS GENERADOS POR EL PROYECTO
+# ==========================================
+
+# Backups de grafos y resultados temporales
+*.backup.json
+*_backup.json
+response_*.json
+edges_generated.json
