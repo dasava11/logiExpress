@@ -1,0 +1,9 @@
+/* Único punto de entrada de Tailwind. Los estilos de cada componente viven en
+   su archivo *.module.css y reutilizan estas utilidades con @apply. */
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+}

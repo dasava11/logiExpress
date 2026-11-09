@@ -1,0 +1,15 @@
+@reference "../index.css";
+
+.wrapper {
+  @apply relative h-full w-full;
+}
+
+.map {
+  @apply h-full w-full;
+}
+
+/* z-index alto: Leaflet usa valores de hasta 1000 en sus paneles. */
+.note {
+  @apply absolute bottom-6 left-3 z-[1000] rounded bg-white/90 px-2 py-1
+    text-xs text-slate-600 shadow;
+}

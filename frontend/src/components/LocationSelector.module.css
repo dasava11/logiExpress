@@ -1,0 +1,48 @@
+@reference "../index.css";
+
+.form {
+  @apply flex flex-col gap-4;
+}
+
+.field {
+  @apply flex flex-col gap-1;
+}
+
+.label {
+  @apply text-sm font-medium text-slate-700;
+}
+
+.select {
+  @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm
+    text-slate-900 shadow-sm focus:border-blue-500 focus:outline-none
+    focus:ring-2 focus:ring-blue-200 disabled:cursor-not-allowed disabled:bg-slate-100;
+}
+
+.stops {
+  @apply flex flex-col gap-2;
+}
+
+.stopRow {
+  @apply flex items-center gap-1;
+}
+
+.stopIndex {
+  @apply flex h-6 w-6 shrink-0 items-center justify-center rounded-full
+    bg-blue-100 text-xs font-semibold text-blue-700;
+}
+
+.iconButton {
+  @apply h-9 w-9 shrink-0 rounded-md border border-slate-300 bg-white text-sm
+    text-slate-600 hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-40;
+}
+
+.secondaryButton {
+  @apply self-start rounded-md border border-dashed border-slate-400 px-3 py-1.5
+    text-sm text-slate-600 hover:border-blue-500 hover:text-blue-600
+    disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.primaryButton {
+  @apply rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white
+    shadow-sm hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-slate-300;
+}
