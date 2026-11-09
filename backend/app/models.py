@@ -1,12 +1,12 @@
 """Modelos del grafo dirigido de LogiExpress.
 
-Qué hay aquí:
-  * Node  -> una ubicación (vértice).
+Acá se define:
+  * Node  -> una ubicación (vertice).
   * Edge  -> una conexión de un nodo a otro, con distancia y duración (arista con peso).
   * Graph -> guarda todos los nodos y, para cada uno, sus aristas de salida.
 
 El grafo es DIRIGIDO: una calle de doble sentido son dos aristas (A->B y B->A),
-porque la ida y la vuelta pueden tener distinta distancia o tiempo.
+porque la ida y la vuelta pueden tener distinta distancia o tiempo, basados en los sentidos recorrido vial.
 """
 from __future__ import annotations
 
@@ -24,19 +24,19 @@ class GraphError(Exception):
 
 
 class DuplicateNodeError(GraphError):
-    """Se intentó registrar dos nodos con el mismo id."""
+    """Se intento registrar dos nodos con el mismo id."""
 
 
 class NodeNotFoundError(GraphError):
-    """Se consultó un nodo que no existe en el grafo."""
+    """Se consulto un nodo que no existe en el grafo."""
 
 
 class InvalidWeightError(GraphError):
-    """Un peso (distancia o duración) es negativo o no es un número finito."""
+    """Un peso (distancia o duración) es negativo o no es un numero finito."""
 
 
 # frozen=True: una vez creado, el objeto no se puede modificar. Evita que
-# alguien cambie por accidente los datos de un nodo en medio del cálculo.
+# en alguna parte del flujo se cambie por accidente los datos de un nodo en medio del calculo.
 @dataclass(frozen=True)
 class Node:
     """Ubicación del mapa. `id` es el identificador estable (ej. "A")."""

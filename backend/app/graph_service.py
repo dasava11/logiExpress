@@ -1,4 +1,4 @@
-"""Carga y acceso al grafo de LogiExpress.
+"""Carga y acceso al grafo.
 
 Responsabilidad: leer `data/sample_graph.json`, construir un `Graph` con los
 modelos de models.py y entregarlo al resto de la aplicación. No implementa
