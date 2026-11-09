@@ -1,17 +1,17 @@
-"""Genera las aristas del grafo consultando OSRM (servicio público de rutas).
+"""Genera las aristas del grafo consultando OSRM (servicio publico de rutas).
 
-Para cada conexión de CONNECTIONS se pide a OSRM la ruta en AMBOS sentidos y se
-guarda: distancia (m), duración (s) y el trazado por calles (lista de puntos).
+Para cada conexion de CONNECTIONS se pide a OSRM la ruta en AMBOS sentidos y se
+guarda: distancia (m), duracion (s) y el trazado por calles (lista de puntos).
 
-Uso, desde la carpeta backend/ y con conexión a internet:
-    python generate_edges.py        (en Windows también: py generate_edges.py)
+Uso, desde la carpeta backend/ y con conexion a internet:
+    python generate_edges.py        (en Windows tambien: py generate_edges.py)
 
-Qué hace con los archivos:
+Que hace con los archivos:
   1. Lee los nodos de data/sample_graph.json.
   2. Escribe todas las aristas en data/edges_generated.json (registro).
-  3. Si se obtuvieron TODAS las aristas (2 por conexión), guarda una copia de
+  3. Si se obtuvieron TODAS las aristas (2 por conexion), guarda una copia de
      seguridad (data/sample_graph.backup.json) y actualiza las aristas de
-     data/sample_graph.json. Si faltó alguna, NO toca sample_graph.json.
+     data/sample_graph.json. Si falto alguna, NO toca sample_graph.json.
 """
 import json
 import shutil
@@ -69,7 +69,7 @@ BASE_URL = "https://router.project-osrm.org/route/v1/driving"
 def build_edge(origin, destination, route):
     """Convierte la respuesta de OSRM en una arista de nuestro grafo."""
 
-    # OSRM entrega cada punto como [longitud, latitud]; nuestro JSON usa
+    # OSRM (OpenStreetMap) entrega cada punto como [longitud, latitud]; el JSON diseñado usa
     # [latitud, longitud] (el orden que espera Leaflet). Se redondea a 5
     # decimales (~1 metro) para que el archivo no pese demasiado.
     geometry = [
@@ -119,11 +119,11 @@ def get_route(client, origin, destination, nodes):
 
 
 def save_json(path, sections):
-    """Guarda un JSON legible: cada nodo/arista en su propia línea.
+    """Guarda un JSON legible: cada nodo/arista en su propia linea.
 
     `sections` es un diccionario {"nodes": [...], "edges": [...]}. Con
-    json.dump(indent=2) cada coordenada de la geometría quedaría en una línea
-    distinta y el archivo sería ilegible.
+    json.dump(indent=2) cada coordenada de la geometria quedaria en una linea
+    distinta y el archivo seria ilegible.
     """
     lines = ["{"]
     names = list(sections)
@@ -173,7 +173,7 @@ def main():
                             f"{len(edge['geometry'])} puntos"
                         )
 
-                    # Uso moderado del servicio público.
+                    # Uso moderado del servicio publico.
                     time.sleep(1)
 
             except httpx.HTTPError as error:

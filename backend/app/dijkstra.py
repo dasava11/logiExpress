@@ -3,6 +3,7 @@
 Responsabilidad: calcular el camino de menor duración entre dos nodos de un
 `Graph`. No conoce FastAPI, React, Leaflet ni OSRM: recibe el grafo como dato.
 """
+
 from __future__ import annotations
 
 import heapq

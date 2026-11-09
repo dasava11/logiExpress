@@ -11,7 +11,7 @@ from __future__ import annotations
 from pydantic import BaseModel, ConfigDict, Field
 
 
-# --- Lo que el frontend ENVÍA -----------------------------------------------
+# --- estructura petición del frontend  -----------------------------------------------
 class RouteRequest(BaseModel):
     origin: str = Field(min_length=1)       # id del origen, p. ej. "A"
     destination: str = Field(min_length=1)  # id del destino
