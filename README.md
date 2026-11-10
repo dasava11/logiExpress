@@ -633,7 +633,7 @@ Observación útil para la demostración: **A → B no tiene arista directa**, p
 
 ## Notebook complementario
 
-`LogiExpress_Notebook.ipynb` es una entrega autocontenida: reúne el modelo del grafo, Dijkstra, la verificación contra Floyd-Warshall en los 240 pares, dos comprobaciones con mapa (A → G con parada E y M → G con parada O), los casos de demostración y los casos de error. No necesita FastAPI ni React. Si `sample_graph.json` está junto al notebook (o en `backend/data/`), lo usa con la geometría completa; si no, usa una copia embebida de los mismos datos con el trazado por calles simplificado de las rutas de demostración. Requiere `matplotlib`.
+`LogiExpress_Notebook.ipynb` es una entrega autocontenida: reúne el modelo del grafo, Dijkstra, dos comprobaciones con mapa (A → G con parada E y M → G con parada O), los casos de demostración y los casos de error. No necesita FastAPI ni React. Si `sample_graph.json` está junto al notebook (o en `backend/data/`), lo usa con la geometría completa; si no, usa una copia embebida de los mismos datos con el trazado por calles simplificado de las rutas de demostración. Requiere `matplotlib`.
 
 ## Referencias
 
