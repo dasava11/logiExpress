@@ -103,7 +103,6 @@ Si ya tienes Python y Node instalados, estos son los comandos mínimos. Cada pas
 ```
 logiexpress/
 ├── README.md
-├── NOTAS_SUSTENTACION.md          # guion y respuestas para la sustentación
 ├── backend/
 │   ├── pytest.ini                 # configuración de pytest (va en backend/, NO en tests/)
 │   ├── requirements.txt
